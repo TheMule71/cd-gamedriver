@@ -81,6 +81,9 @@ BINPATH=-DBINDIR=\"$(BINDIR)\"
 .c.o:
 	$(CC) $(CFLAGS) $(MPATH) $(BINPATH) -o $@ -c $<
 
+interpret.o: interpret.c
+	$(CC) $(CFLAGS) -Wno-array-bounds $(MPATH) $(BINPATH) -o $@ -c $<
+
 driver: $(OBJ) lang.o ${IOBJ}
 	$(CC) $(CFLAGS) $(OBJ) lang.o ${IOBJ} -o driver $(LIBS)
 
