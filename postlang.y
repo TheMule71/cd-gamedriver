@@ -2405,7 +2405,7 @@ check_inherits(struct program *from)
     size_t len = strlen(from->name) - 1;
     char *ob_name = alloca(len);
     
-    (void)strncpy(ob_name, from->name, len - 1);
+    (void)memcpy(ob_name, from->name, len - 1);
     ob_name[len - 1] = 0;
     ob = find_object2(ob_name);
 

@@ -1897,7 +1897,7 @@ add_input(char *p)
     }
     outp -= l;
     nbuf += l;
-    (void)strncpy(outp, p, l);
+    (void)memcpy(outp, p, l);
 }
 
 #define DEFHASH 1999

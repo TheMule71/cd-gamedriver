@@ -110,7 +110,7 @@ global_plural_word(struct svalue *fp)
 	return;
     }
     tmp = alloca((strlen((char *)str) + 10));
-    (void)strncpy(tmp, str, sl);
+    (void)memcpy(tmp, str, sl);
     ultimate = str[sl - 1];
     penultimate = str[sl - 2];
     tmp[sl] = '\0';

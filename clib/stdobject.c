@@ -71,7 +71,7 @@ object_check_call(struct svalue *fp)
 	{
 	    size_t len = strlen(p);
 	    p2 = (char *) alloca(len - 1);
-	    (void)strncpy(p2, p, len - 2);
+	    (void)memcpy(p2, p, len - 2);
 	    p2[len - 2] = '\0';
 	    ret = process_value(p2, 1);
 	}
@@ -174,7 +174,7 @@ object_query_prop(struct svalue *fp)
 	{
 	    size_t len = strlen(p);
 	    p2 = (char *) alloca(len - 1);
-	    (void)strncpy(p2, p, len - 2);
+	    (void)memcpy(p2, p, len - 2);
 	    p2[len - 2] = '\0';
 	    ret = process_value(p2, 1);
 	}
