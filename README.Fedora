@@ -1,0 +1,4 @@
+In order to build cd-gamedriver on a recent Fedora (this has been tested on
+Fedora 29) you need to install the bison and json-c-devel packages:
+
+sudo dnf install bison json-c-devel
